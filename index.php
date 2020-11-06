@@ -18,9 +18,9 @@
         <center><h2> เกิดวันที่ 25 กุมภาพันธ์ ปี 2002 ค่ะ</h2>
         <h2>รูปที่เห็นคือน้องม้าคลูกชายหนูเองค่ะ</h2>
         <h2>ถึงน้องจะเกิดปี 1997 แต่ถ้าเรามองเป็นลูกก็เป็นลูก</h2>
-        <img src="11.jpg" width="250" height="300">
+        <img src="1.jpg" width="250" height="300">
 
-        <img src="12.jpg" width="250" height="300">
+        <img src="2.jpg" width="250" height="300">
         </center>
         <br />
         <Font face="EucrosiaUPC" size="7">
