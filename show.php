@@ -37,6 +37,8 @@ while($result = mysqli_fetch_array($res))
     <td><?php echo $result['name'];?></div></td>
     <td><?php echo $result['comment'];?></td>
     <td><?php echo $result['link'];?></td>
+    <td><button type="submit" class="btn btn-primary" >Edit</button></td>
+    <td><button type="submit" class="btn btn-primary" >Delete</button></td>
   </tr>
 <?php
 }
