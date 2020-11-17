@@ -8,7 +8,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body style="background-color: #fffdf1;">
 <?php
 
 $conn = mysqli_init();
@@ -19,26 +19,29 @@ if (mysqli_connect_errno($conn))
 }
 $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 ?>
-<div class="container">
-<table class="table">
+<div class="container" style="padding-top: 50px;">
+<table class="table table-bordered">
     <thead class="thead-dark">
       <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
+        <th><center>Firstname</center></th>
+        <th><center>Lastname</center></th>
+        <th><center>Email</center></th>
+        <th><center>Action</center></th>
       </tr>
     </thead>
+
 
 <?php
 while($result = mysqli_fetch_array($res))
 {
 ?>
-  <tr>
+  <tr class="table-danger">
     <td><?php echo $result['name'];?></div></td>
     <td><?php echo $result['comment'];?></td>
     <td><?php echo $result['link'];?></td>
-    <td><button type="submit" class="btn btn-primary" >Edit</button></td>
-    <td><button type="submit" class="btn btn-primary" >Delete</button></td>
+    <form class="form-inline">
+    <td><center><button type="submit" class="btn btn-primary" onClick="window.location='delete.php'">Delete</button></td>
+    </form>
   </tr>
 <?php
 }
