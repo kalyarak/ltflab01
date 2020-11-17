@@ -13,7 +13,7 @@ if ($_GET['id']){
     die();
 }
 
-$sql = "DELETE FROM guestbook WHERE id = {$id}";
+$sql = "DELETE FROM guestbook WHERE id = {$id} , name = '{$name}' , comment = '{$comment}' , link = '{$link}';
 $query = mysqli_query($conn, $sql);
 
 echo "<a href=\"show.php"\">BACK</a>";
