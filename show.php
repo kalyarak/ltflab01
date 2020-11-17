@@ -10,34 +10,20 @@
 </head>
 <body>
 <?php
-
 $conn = mysqli_init();
-mysqli_real_connect($conn, 'itflab.mysql.database.azure.com', 'miew@itflab', 'Mw7456891023', 'itflab', 3306);
+mysqli_real_connect($conn, 'panwit.mysql.database.azure.com', 'panwit@panwit', '123456789', 'itflab', 3306);
 if (mysqli_connect_errno($conn))
 {
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
 $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 ?>
-<div class="container">
-<table class="table">
-    <thead class="thead-dark">
-      <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-      
-<!-- <table width="600" border="1">
+<table width="600" border="1">
   <tr>
-    <th width="100"> <div align="center">Name</div></th>
-    <th width="350"> <div align="center">Comment </div></th>
-    <th width="150"> <div align="center">Link </div></th>
-    <th width="150"> <div align="center">Action </div></th>
-  </tr> -->
+    <th width="100"> <div align="center">name</div></th>
+    <th width="350"> <div align="center">comment </div></th>
+    <th width="150"> <div align="center">link </div></th>
+  </tr>
 <?php
 while($Result = mysqli_fetch_array($res))
 {
