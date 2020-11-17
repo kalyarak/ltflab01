@@ -40,7 +40,7 @@ while($result = mysqli_fetch_array($res))
     <td><?php echo $result['comment'];?></td>
     <td><?php echo $result['link'];?></td>
     <form class="form-inline">
-    <td><center><button type="submit" class="btn btn-primary" onClick="window.location='delete.php'">Delete</button></td>
+    <td><center><button type="submit" class="btn btn-light"><a href="delete.php?id=$id\">Delete</a></div></td>
     </form>
   </tr>
 <?php
