@@ -6,13 +6,6 @@ if (mysqli_connect_errno($conn))
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
 
-if ($_REQUEST['id']){
-    $id = $_REQUEST['id'];
-}else{
-    echo "comment not found";
-    die();
-}
-
 $sql = "DELETE FROM guestbook WHERE id = {$id}";
 $query = mysqli_query($sql);
 
