@@ -6,8 +6,8 @@ if (mysqli_connect_errno($conn))
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
 
-if ($_GET['id']){
-    $id = $_GET['id'];
+if ($_REQUEST['id']){
+    $id = $_REQUEST['id'];
 }else{
     echo "comment not found";
     die();
