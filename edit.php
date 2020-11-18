@@ -21,7 +21,7 @@ mysqli_close($conn);
 ?>
    
 <html lang="en">
-    <head><title>Edit<title></head>
+    <head><title>Edit</title></head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -46,35 +46,33 @@ mysqli_close($conn);
   -moz-border-radius: 20px;
   -webkit-border-radius: 20px;
   -o-border-radius: 20px;
-  -ms-border-radius: 20px; }
-
-  .comment-form {
-    padding: 8%;
-    padding-top: 200px;
+  -ms-border-radius: 20px; 
   }
 </style>
 
-<body>
-<body background="15.png">
-    <h1>Edit Product</h1>
+<h1 style="padding-top: 200px; padding-left: 45%; color: rgb(255, 255, 255); text-shadow:1px 1px 10px rgb(4, 0, 54);"><b>Edit form</b></h1>
+<body> 
+<body background="16.jpg">
 <div class="comment-form">
 <div class="container">
 <form action="save-edit.php" method = "post">
 <div class="col-sm-1">
   <div class="form-group" style="padding-left: 10px; padding-top: 20px;">
-    <b><font size="6" color=#00338d><label for="idName">Name:</label></font></b>
+    <b><font size="6" color=#294867><label for="idName">Name:</label></font></b>
     <input type="text" class="form-control" placeholder="Enter Name" id="idName" name = "name" style="width: 210px;" value="<?=$user_id['name'];?>">
   </div>
   <div class="form-group" style="padding-left: 10px;">
-    <b><font size="6" color=#00338d><label for="idComment">Comment:</label></font></b>
+    <b><font size="6" color=#294867><label for="idComment">Comment:</label></font></b>
     <textarea class="form-control" rows="5"placeholder="Comment here" style="width: 225px;" id="idComment" name = "comment" value="<?=$user_id['comment'];?>"></textarea>
   </div>
   <div class="form-group" style="padding-left: 10px;">
-    <b><font size="6" color=#00338d><label for="idLink">Link:</label></font></b>
+    <b><font size="6" color=#294867><label for="idLink">Link:</label></font></b>
     <input type="text" class="form-control" placeholder="Enter Link" id="idLink" name = "link" style="width: 210px;" value="<?=$user_id['link'];?>">
   </div>
   <div class="form-group form-check">
+    <form action="show.php">
   <center><button type="submit" class="btn btn-primary" >Submit</button></center>
+    </form>
   </div>
 </div>
 </form>
