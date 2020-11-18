@@ -23,9 +23,9 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 <table class="table table-hover">
     <thead class="thead-dark">
       <tr>
-        <th><center>Firstname</center></th>
-        <th><center>Lastname</center></th>
-        <th><center>Email</center></th>
+        <th><center>Name</center></th>
+        <th><center>Comment</center></th>
+        <th><center>Link</center></th>
         <th><center>Action</center></th>
       </tr>
     </thead>
