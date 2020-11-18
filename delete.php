@@ -6,14 +6,19 @@ if (mysqli_connect_errno($conn))
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
 
-if ($_GET['id']){
-    $id = $_GET['id'];
-} else {
-    echo "comment not found";
-    die();
-}
+$id = $_GET['id'];
 
-$sql = "DELETE FROM guestbook WHERE id = {$id} , name = '{$name}' , comment = '{$comment}' , link = '{$link}';
-$query = mysqli_query($conn, $sql);
 
+
+$sql = "DELETE FROM guestbook WHERE id = $id";
+
+
+if (mysqli_query($conn, $sql)) {
+    echo "New record created successfully";
+  } else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+  }
+  
+mysqli_close($conn);
+?>
 echo "<a href=\"show.php"\">BACK</a>";
