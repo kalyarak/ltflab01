@@ -34,19 +34,20 @@ while($result = mysqli_fetch_array($res))
 {
 ?>
   <tr class="table-danger">
-    <td><?php echo $result['name'];?></div></td>
+    <td><?php echo $result['name'];?></td>
     <td><?php echo $result['comment'];?></td>
     <td><?php echo $result['link'];?></td>
 <!--     <td><center><button type="submit" class="btn btn-light"><a href="delete.php?id=<?=$result['id'];?>">Delete</a></button></center</td> -->
 <!--         <button type="submit" class="btn btn-light"><a href="edit.php?id=<?=$result['id'];?>">Edit</a></button></td> -->
   </tr>
 </table>
+</div>
 <?php
 }
 ?>
 <?php
 mysqli_close($conn);
 ?>
-<center><button type="submit" class="btn btn-primary" onclick="window.location= 'form.html'">Add</button></center>
+<!-- <center><button type="submit" class="btn btn-primary" onclick="window.location= 'form.html'">Add</button></center> -->
 </body>
 </html>
