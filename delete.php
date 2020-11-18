@@ -1,3 +1,4 @@
+<form action="show.php" name="delete" method="get">
 <?php
 $conn = mysqli_init();
 mysqli_real_connect($conn, 'itflab.mysql.database.azure.com', 'miew@itflab', 'Mw7456891023', 'itflab', 3306);
@@ -19,4 +20,4 @@ if (mysqli_query($conn, $sql)) {
   
 mysqli_close($conn);
 ?>
-<form action="delete.php" name="delete" method="get">
+
