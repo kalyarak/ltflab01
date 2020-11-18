@@ -29,8 +29,6 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
         <th><center>Action</center></th>
       </tr>
     </thead>
-
-
 <?php
 while($result = mysqli_fetch_array($res))
 {
@@ -44,6 +42,9 @@ while($result = mysqli_fetch_array($res))
   </tr>
 </table>
 <center><button type="submit" class="btn btn-primary" onclick="window.location= 'form.html'">Add</button></center>
+<?php
+}
+?>
 <?php
 mysqli_close($conn);
 ?>
