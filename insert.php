@@ -24,3 +24,4 @@ if (mysqli_query($conn, $sql)) {
   
 mysqli_close($conn);
 ?>
+<form action="show.php" name="delete" method="post">
