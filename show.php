@@ -20,13 +20,14 @@ if (mysqli_connect_errno($conn))
 $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 ?>
 <div class="container" style="padding-top: 50px;">
-<table class="table table-bordered">
+<table class="table table-hover">
     <thead class="thead-dark">
       <tr>
         <th><center>Firstname</center></th>
         <th><center>Lastname</center></th>
         <th><center>Email</center></th>
         <th><center>Action</center></th>
+
       </tr>
     </thead>
 <?php
@@ -37,10 +38,10 @@ while($result = mysqli_fetch_array($res))
     <td><?php echo $result['name'];?></div></td>
     <td><?php echo $result['comment'];?></td>
     <td><?php echo $result['link'];?></td>
-    <td><center><button type="submit" class="btn btn-light"><a href="delete.php?id=<?=$_GET['id'];?>">Delete</a></button>
-        <button type="submit" class="btn btn-light"><a href="edit.php?id=<?=$_GET['id'];?>">Edit</a></button></td>
+    <td><center><button type="submit" class="btn btn-light"><a href="delete.php?id=<?=$_GET['id'];?>">Delete</a></button>  <button type="submit" class="btn btn-light"><a href="edit.php?id=<?=$_GET['id'];?>">Edit</a></center></button></td>
   </tr>
 </table>
+
 <center><button type="submit" class="btn btn-primary" onclick="window.location= 'form.html'">Add</button></center>
 <?php
 }
