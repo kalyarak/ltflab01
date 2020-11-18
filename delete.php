@@ -12,10 +12,11 @@ $sql = "DELETE FROM guestbook WHERE id = $id";
 
 
 if (mysqli_query($conn, $sql)) {
-    echo "alert('Delete Succesfully');window.location='show.php';";
+    echo "Delete Succesfully";
   } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
   }
   
 mysqli_close($conn);
 ?>
+<form action="delete.php" name="delete" method="get">
