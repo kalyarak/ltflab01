@@ -20,5 +20,3 @@ if($sql){
 	echo 'Can not Update!';
 }
 ?>
-
-?>
