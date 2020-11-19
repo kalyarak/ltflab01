@@ -53,15 +53,15 @@ $row = mysqli_fetch_assoc($sql);
 <div class="col-sm-1">
   <div class="form-group" style="padding-left: 10px; padding-top: 20px;">
     <b><font size="6" color=#294867><label for="idName">Name:</label></font></b>
-    <input type="text" class="form-control" placeholder="Enter Name" id="idName" name = "name" style="width: 210px;" value="<?=$row['name'];?>">
+    <input type="text" class="form-control" placeholder="Enter Name" id="idName" name = "name" style="width: 210px;" value="<?=$_POST['name'];?>">
   </div>
   <div class="form-group" style="padding-left: 10px;">
     <b><font size="6" color=#294867><label for="idComment">Comment:</label></font></b>
-    <textarea class="form-control" rows="5"placeholder="Comment here" style="width: 225px;" id="idComment" name = "comment" value="<?=$row['comment'];?>"></textarea>
+    <textarea class="form-control" rows="5"placeholder="Comment here" style="width: 225px;" id="idComment" name = "comment" value="<?=$_POST['comment'];?>"></textarea>
   </div>
   <div class="form-group" style="padding-left: 10px;">
     <b><font size="6" color=#294867><label for="idLink">Link:</label></font></b>
-    <input type="text" class="form-control" placeholder="Enter Link" id="idLink" name = "link" style="width: 210px;" value="<?=$row['link'];?>">
+    <input type="text" class="form-control" placeholder="Enter Link" id="idLink" name = "link" style="width: 210px;" value="<?=$_POST['link'];?>">
   </div>
   <div class="form-group form-check">
   <center><button type="submit" class="btn btn-primary" >Submit</button></center>
