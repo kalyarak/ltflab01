@@ -12,7 +12,7 @@ $comment = $_POST['comment'];
 $link = $_POST['link'];
 
 $sql = "UPDATE guestbook SET name = $name , comment = $comment , link = $link WHERE id = $id" ;
-$query = mysqli_query($conn , $sql);
+$query = mysqli_query($conn , $sql) or die(mysql_error());
 
 if($sql){
 	header('location: show.php');
