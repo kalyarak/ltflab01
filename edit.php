@@ -1,4 +1,3 @@
-<form action="show.php" name="insert" method="post">
 <?php
 $conn = mysqli_init();
 mysqli_real_connect($conn, 'itflab.mysql.database.azure.com', 'miew@itflab', 'Mw7456891023', 'itflab', 3306);
@@ -70,9 +69,7 @@ mysqli_close($conn);
     <input type="text" class="form-control" placeholder="Enter Link" id="idLink" name = "link" style="width: 210px;" value="<?=$user_id['link'];?>">
   </div>
   <div class="form-group form-check">
-    <form action="show.php">
   <center><button type="submit" class="btn btn-primary" >Submit</button></center>
-    </form>
   </div>
 </div>
 </form>
