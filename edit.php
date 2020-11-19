@@ -1,19 +1,3 @@
-<?php
-$conn = mysqli_init();
-mysqli_real_connect($conn, 'itflab.mysql.database.azure.com', 'miew@itflab', 'Mw7456891023', 'itflab', 3306);
-if (mysqli_connect_errno($conn))
-{
-    die('Failed to connect to MySQL: '.mysqli_connect_error());
-}
-
-
-$id = $_GET['id'];
-$sql = "SELECT * FROM guestbook WHERE id = $id";
-$query = mysqli_query($conn , $sql);
-$row = mysqli_fetch_assoc($sql);
-
-?>
-   
 <html lang="en">
     <head><title>Edit</title></head>
     <meta charset="UTF-8">
@@ -49,6 +33,22 @@ $row = mysqli_fetch_assoc($sql);
 <body background="16.jpg">
 <div class="comment-form">
 <div class="container">
+
+<?php
+$conn = mysqli_init();
+mysqli_real_connect($conn, 'itflab.mysql.database.azure.com', 'miew@itflab', '1234', 'itflab', 3306);
+if (mysqli_connect_errno($conn))
+{
+    die('Failed to connect to MySQL: '.mysqli_connect_error());
+}
+
+$id = $_GET['id'];
+$sql = "SELECT * FROM guestbook WHERE id = $id";
+$query = mysqli_query($conn , $sql);
+$row = mysqli_fetch_assoc($sql);
+
+?>
+
 <form action="save-edit.php?id=<?=$row['id']; ?>" method = "post">
 <div class="col-sm-1">
   <div class="form-group" style="padding-left: 10px; padding-top: 20px;">
