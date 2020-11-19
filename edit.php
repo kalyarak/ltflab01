@@ -42,15 +42,12 @@ if (mysqli_connect_errno($conn))
     die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
 $id = $_GET['id'];
-$row = false;
 $sql = "SELECT * FROM guestbook WHERE id = $id";
 $query = mysqli_query($conn , $sql);
+$row = mysqli_fetch_assoc($query);
+?>
 
-if(mysqli_num_rows($query) > 0){
-    $row = mysqli_fetch_array($query);
-}
-
-<form action="save-edit.php" method = "post">
+<form action="save-edit.php?id=<?=$row['id'];?>" method = "post">
 <input type="hidden" name="id" value="<?=$row['id'];?>">
 <div class="col-sm-1">
   <div class="form-group" style="padding-left: 10px; padding-top: 20px;">
