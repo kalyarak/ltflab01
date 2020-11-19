@@ -7,8 +7,8 @@ if (mysqli_connect_errno($conn))
 }
 
 
-if($_POST['id']){
-    $id = $_POST['id'];
+if($_POST['user-id']){
+    $id = $_POST['user-id'];
 }else{
     echo "id not found";
     die();
