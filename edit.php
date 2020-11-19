@@ -47,7 +47,7 @@ $query = mysqli_query($conn , $sql);
 $row = mysqli_fetch_assoc($query);
 ?>
 
-<form action="save-edit.php?id=<?=$row['id'];?>" method = "post">
+<form action="save-edit.php" method = "post">
 <input type="hidden" name="id" value="<?=echo $id;?>">
 <div class="col-sm-1">
   <div class="form-group" style="padding-left: 10px; padding-top: 20px;">
