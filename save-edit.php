@@ -7,18 +7,18 @@ if (mysqli_connect_errno($conn))
 }
 
 
-if($_POST['id']){
-    $id = $_POST['id'];
-}else{
-    echo "id not found";
-    die();
-}
-
 $name = $_POST['name'];
 $comment = $_POST['comment'];
 $link = $_POST['link'];
 
 $sql = "UPDATE guestbook SET name = $name , comment = $comment , link = $link WHERE id = $id" ;
 $query = mysqli_query($conn , $sql);
+
+if($sql){
+	header('location: show.php');
+}else{
+	echo 'Can not Update!';
+}
+?>
 
 ?>
