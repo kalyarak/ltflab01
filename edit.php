@@ -8,13 +8,9 @@ if (mysqli_connect_errno($conn))
 
 
 $id = $_GET['id'];
-$user_id = false;
 $sql = "SELECT * FROM guestbook WHERE id = $id";
 $query = mysqli_query($conn , $sql);
-
-if(mysqli_num_rows($query) > 0){
-    $user_id = mysqli_fetch_array($query);
-}
+$row = mysqli_fetch_assoc($sql);
 
 mysqli_close($conn);
 ?>
@@ -54,7 +50,7 @@ mysqli_close($conn);
 <body background="16.jpg">
 <div class="comment-form">
 <div class="container">
-<form action="save-edit.php" method = "post">
+<form action="save-edit.php?id=<?=$row['id']; ?>" method = "post">
 <div class="col-sm-1">
   <div class="form-group" style="padding-left: 10px; padding-top: 20px;">
     <b><font size="6" color=#294867><label for="idName">Name:</label></font></b>
