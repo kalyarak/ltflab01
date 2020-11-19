@@ -12,9 +12,9 @@ $comment = $_POST['comment'];
 $link = $_POST['link'];
 
 $sql = "UPDATE guestbook SET name = $name , comment = $comment , link = $link WHERE id = $id" ;
-$query = mysqli_query($conn , $sql) or die(mysql_error());
+$query = mysqli_query($conn , $sql);
 
-if($sql){
+if($query){
 	header('location: show.php');
 }else{
 	echo 'Can not Update!';
