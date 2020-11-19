@@ -48,7 +48,7 @@ $row = mysqli_fetch_assoc($query);
 ?>
 
 <form action="save-edit.php?id=<?=$row['id'];?>" method = "post">
-<input type="hidden" name="id" value="<?=$row['id'];?>">
+<input type="hidden" name="id" value="<?=echo $id;?>">
 <div class="col-sm-1">
   <div class="form-group" style="padding-left: 10px; padding-top: 20px;">
     <b><font size="6" color=#294867><label for="idName">Name:</label></font></b>
