@@ -44,7 +44,7 @@ if (mysqli_connect_errno($conn))
 
 $id = $_GET['id'];
 $sql = "SELECT * FROM guestbook WHERE id = $id";
-$query = mysqli_query($conn , $sql);
+$query = mysqli_query($conn , $sql) or die(mysql_error());
 $row = mysqli_fetch_assoc($sql);
 
 ?>
