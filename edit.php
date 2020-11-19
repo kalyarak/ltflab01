@@ -12,7 +12,6 @@ $sql = "SELECT * FROM guestbook WHERE id = $id";
 $query = mysqli_query($conn , $sql);
 $row = mysqli_fetch_assoc($sql);
 
-mysqli_close($conn);
 ?>
    
 <html lang="en">
