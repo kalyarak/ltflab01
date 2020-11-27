@@ -11,16 +11,16 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 $product = $_POST['product'];
 $price = $_POST['price'];
 $amount = $_POST['amount'];
-$total = $price * $amount
+// $total = $price * $amount
 
-$sql = "INSERT INTO guestbook (product , price , amount, total) VALUES ('$product', '$price', '$amount', '$total')";
+$sql = "INSERT INTO guestbook (product , price , amount) VALUES ('$product', '$price', '$amount')";
 
 
-if (mysqli_query($db, $sql)) {
+if (mysqli_query($conn, $sql)) {
     header('location: show1.php');
   } else {
-    echo "Error: " . $sql . "<br>" . mysqli_error($db);
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
   }
   
-mysqli_close($db);
+mysqli_close($conn);
 ?>
