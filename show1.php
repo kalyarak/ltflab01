@@ -23,10 +23,12 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 <table class="table table-hover">
     <thead class="thead-dark">
       <tr>
-        <th><center>Product</center></th>
-        <th><center>Price</center></th>
-        <th><center>Amount</center></th>
-        <th><center>Total</center></th>
+        <th><center>ชื่อสินค้า</center></th>
+        <th><center>ราคา</center></th>
+        <th><center>จำนวน</center></th>
+        <th><center>ราคาทั้งหมด</center></th>
+        <th><center>การจัดการ</center></th>
+        
       </tr>
     </thead>
 <?php
@@ -39,8 +41,7 @@ while($result = mysqli_fetch_array($res))
     <td><?php echo $result['price'];?></td>
     <td><?php echo $result['amount'];?></td>
     <td><?php echo $total;?></td>
-    <td><center><button type="submit" class="btn btn-light"><a href="delete.php?id=<?=$result['id'];?>">Delete</a></button></center</td>
-        <button type="submit" class="btn btn-light"><a href="edit.php?id=<?=$result['id'];?>">Edit</a></button></td>
+    <td><center><button type="submit" class="btn btn-light"><a href="delete1.php?id=<?=$result['id'];?>">Delete</a></button></center</td>
   </tr>
 </div>
 <?php
