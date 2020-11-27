@@ -17,7 +17,7 @@ $sql = "INSERT INTO guestbook (product , price , amount, total) VALUES ('$produc
 
 
 if (mysqli_query($db, $sql)) {
-    header('location: show.php');
+    header('location: show1.php');
   } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($db);
   }
