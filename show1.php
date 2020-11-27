@@ -23,10 +23,10 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 <table class="table table-hover">
     <thead class="thead-dark">
       <tr>
-        <th><center>Name</center></th>
-        <th><center>Comment</center></th>
-        <th><center>Link</center></th>
-        <th><center>Action</center></th>
+        <th><center>Product</center></th>
+        <th><center>Price</center></th>
+        <th><center>Amount</center></th>
+        <th><center>Total</center></th>
       </tr>
     </thead>
 <?php
@@ -37,6 +37,7 @@ while($result = mysqli_fetch_array($res))
     <td><?php echo $result['product'];?></div></td>
     <td><?php echo $result['price'];?></td>
     <td><?php echo $result['amount'];?></td>
+    <td><?php echo $result['total'];?></td>
     <td><center><button type="submit" class="btn btn-light"><a href="delete.php?id=<?=$result['id'];?>">Delete</a></button></center</td>
         <button type="submit" class="btn btn-light"><a href="edit.php?id=<?=$result['id'];?>">Edit</a></button></td>
   </tr>
