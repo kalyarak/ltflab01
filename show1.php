@@ -11,8 +11,6 @@
 <body style="background-color: #fffdf1;">
 <?php
 
-<?php
-
 $conn = mysqli_init();
 mysqli_real_connect($conn, 'itflab.mysql.database.azure.com', 'miew@itflab', 'It123456789', 'itflab', 3306);
 if (mysqli_connect_errno($conn))
@@ -21,15 +19,14 @@ if (mysqli_connect_errno($conn))
 }
 $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 ?>
-
 <div class="container" style="padding-top: 50px;">
 <table class="table table-hover">
     <thead class="thead-dark">
       <tr>
-        <th><center>Product</center></th>
-        <th><center>Price</center></th>
-        <th><center>Amount</center></th>
-        <th><center>Total</center></th>
+        <th><center>Name</center></th>
+        <th><center>Comment</center></th>
+        <th><center>Link</center></th>
+        <th><center>Action</center></th>
       </tr>
     </thead>
 <?php
@@ -40,7 +37,6 @@ while($result = mysqli_fetch_array($res))
     <td><?php echo $result['product'];?></div></td>
     <td><?php echo $result['price'];?></td>
     <td><?php echo $result['amount'];?></td>
-<!--     <td><?php echo $result['total'];?></td> -->
     <td><center><button type="submit" class="btn btn-light"><a href="delete.php?id=<?=$result['id'];?>">Delete</a></button></center</td>
         <button type="submit" class="btn btn-light"><a href="edit.php?id=<?=$result['id'];?>">Edit</a></button></td>
   </tr>
@@ -48,9 +44,9 @@ while($result = mysqli_fetch_array($res))
 <?php
 }
 ?>
-</table>
+ </table>
 <?php
-mysqli_close($db);
+mysqli_close($conn);
 ?>
 <center><button type="submit" class="btn btn-primary" onclick="window.location= 'form1.html'">Add</button></center>
 </body>
