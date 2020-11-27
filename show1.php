@@ -32,8 +32,8 @@ $res = mysqli_query($conn, 'SELECT * FROM guestbook');
 <?php
 while($result = mysqli_fetch_array($res))
 {
-?>
   $total = $result['price'] * $result['amount'];
+?>
   <tr class="table-danger">
     <td><?php echo $result['product'];?></div></td>
     <td><?php echo $result['price'];?></td>
