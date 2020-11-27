@@ -40,7 +40,7 @@ while($result = mysqli_fetch_array($res))
     <td><?php echo $result['product'];?></div></td>
     <td><?php echo $result['price'];?></td>
     <td><?php echo $result['amount'];?></td>
-    <td><?php echo $result['total'];?></td>
+<!--     <td><?php echo $result['total'];?></td> -->
     <td><center><button type="submit" class="btn btn-light"><a href="delete.php?id=<?=$result['id'];?>">Delete</a></button></center</td>
         <button type="submit" class="btn btn-light"><a href="edit.php?id=<?=$result['id'];?>">Edit</a></button></td>
   </tr>
@@ -52,6 +52,6 @@ while($result = mysqli_fetch_array($res))
 <?php
 mysqli_close($db);
 ?>
-<center><button type="submit" class="btn btn-primary" onclick="window.location= 'form.html'">Add</button></center>
+<center><button type="submit" class="btn btn-primary" onclick="window.location= 'form1.html'">Add</button></center>
 </body>
 </html>
